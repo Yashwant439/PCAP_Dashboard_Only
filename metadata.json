@@ -1,0 +1,6 @@
+{
+  "name": "IPsec Protocol Analyzer & Security Framework",
+  "description": "AI-driven IPsec VPN protocol analysis platform and automated security assessment framework for NTRO (Problem Statement 26160).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

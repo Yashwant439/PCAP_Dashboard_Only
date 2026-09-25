@@ -1,0 +1,160 @@
+{
+  "dataset_schema_version": "3.0",
+  "experiment_id": "AES128_SHA256_DH15_PFS14_ICMP",
+  "repetition": 4,
+  "timestamp": "2026-09-25T16:06:26.734776",
+  "status": "SUCCESS",
+  "ike_version": "IKEv2",
+  "authentication": "PSK",
+  "mode": "TUNNEL",
+  "requested": {
+    "ike": "aes128-sha256-modp3072",
+    "esp": "aes128-sha256-modp2048",
+    "traffic": "icmp"
+  },
+  "ike": {
+    "configured": {
+      "configured_proposal": "aes128-sha256-modp3072",
+      "encryption": "aes128",
+      "integrity": "sha256",
+      "dh": "modp3072"
+    },
+    "negotiated": "AES_CBC_128/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_3072",
+    "normalized_negotiated": {
+      "encryption": "aes128",
+      "integrity": "sha256",
+      "prf": "sha256",
+      "dh": "modp3072"
+    },
+    "prf": "PRF_HMAC_SHA2_256",
+    "dh": "MODP_3072",
+    "spis": "2fee7d4418600eae_i* 61d93e84c8283b00_r, pre-shared key reauthentication in 7 hours"
+  },
+  "esp": {
+    "configured": {
+      "configured_proposal": "aes128-sha256-modp2048",
+      "encryption": "aes128",
+      "integrity": "sha256",
+      "pfs": true,
+      "pfs_group": "modp2048"
+    },
+    "negotiated": "AES_CBC_128/HMAC_SHA2_256_128/NO_EXT_SEQ",
+    "normalized_negotiated": {
+      "encryption": "aes128",
+      "integrity": "sha256",
+      "pfs_group": "modp_2048"
+    },
+    "child_sa": {
+      "mode": "TUNNEL",
+      "installed": true
+    },
+    "pfs": {
+      "configured": true,
+      "configured_group": "modp2048",
+      "negotiated": true,
+      "negotiated_group": "modp_2048"
+    },
+    "spis": {
+      "inbound": "c2d5bff8",
+      "outbound": "cb477833",
+      "raw": "c2d5bff8_i cb477833_o"
+    }
+  },
+  "traffic": {
+    "type": "icmp"
+  },
+  "ground_truth": {
+    "ike_version": "IKEv2",
+    "authentication": "PSK",
+    "mode": "TUNNEL",
+    "ike": {
+      "encryption": "aes128",
+      "integrity": "sha256",
+      "prf": "PRF_HMAC_SHA2_256",
+      "dh": "modp3072"
+    },
+    "esp": {
+      "encryption": "aes128",
+      "integrity": "sha256"
+    },
+    "pfs": {
+      "configured": true,
+      "configured_group": "modp2048",
+      "negotiated": true,
+      "negotiated_group": "modp_2048"
+    },
+    "traffic_type": "icmp"
+  },
+  "validation": {
+    "valid": true,
+    "requested": {
+      "ike": {
+        "encryption": "aes128",
+        "integrity": "sha256",
+        "dh": "modp3072"
+      },
+      "esp": {
+        "encryption": "aes128",
+        "integrity": "sha256",
+        "pfs_group": "modp2048"
+      }
+    },
+    "negotiated": {
+      "ike_raw": "AES_CBC_128/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_3072",
+      "ike": {
+        "encryption": "aes128",
+        "integrity": "sha256",
+        "prf": "sha256",
+        "dh": "modp3072"
+      },
+      "esp_raw": "AES_CBC_128/HMAC_SHA2_256_128/NO_EXT_SEQ",
+      "esp": {
+        "encryption": "aes128",
+        "integrity": "sha256",
+        "pfs_group": "modp_2048"
+      }
+    },
+    "office_b_negotiated": {
+      "ike_raw": "AES_CBC_128/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_3072",
+      "ike": {
+        "encryption": "aes128",
+        "integrity": "sha256",
+        "prf": "sha256",
+        "dh": "modp3072"
+      },
+      "esp_raw": null,
+      "esp": null
+    },
+    "child_sa": {
+      "office_a": {
+        "installed": true,
+        "mode": "TUNNEL",
+        "raw": "office-vpn{1}:  INSTALLED, TUNNEL, reqid 1, ESP SPIs: c15d762f_i c9a34420_o"
+      },
+      "office_b": {
+        "installed": true,
+        "mode": "TUNNEL",
+        "raw": "office-vpn{1}:  INSTALLED, TUNNEL, reqid 1, ESP SPIs: c9a34420_i c15d762f_o"
+      }
+    },
+    "mismatches": [],
+    "pfs": {
+      "configured": true,
+      "requested_group": "modp_2048",
+      "negotiated": true,
+      "negotiated_group": "modp_2048"
+    }
+  },
+  "capture": {
+    "interface": "enp0s8",
+    "filter": "udp port 500 or udp port 4500 or ip proto 50",
+    "file": "D:\\SIH-160\\ai-based-pcap-analyzer\\pcap_factory\\captures\\AES128_SHA256_DH15_PFS14_ICMP_rep04.pcap",
+    "tcpdump_pid": "74333"
+  },
+  "evidence": {
+    "ike_up_output": "initiating IKE_SA office-vpn[1] to 192.168.56.107\ngenerating IKE_SA_INIT request 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) N(HASH_ALG) N(REDIR_SUP) ]\nsending packet: from 192.168.56.106[500] to 192.168.56.107[500] (584 bytes)\nreceived packet: from 192.168.56.107[500] to 192.168.56.106[500] (592 bytes)\nparsed IKE_SA_INIT response 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) N(HASH_ALG) N(CHDLESS_SUP) N(MULT_AUTH) ]\nselected proposal: IKE:AES_CBC_128/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_3072\nauthentication of '192.168.56.106' (myself) with pre-shared key\nestablishing CHILD_SA office-vpn{1}\ngenerating IKE_AUTH request 1 [ IDi N(INIT_CONTACT) IDr AUTH SA TSi TSr N(MULT_AUTH) N(EAP_ONLY) N(MSG_ID_SYN_SUP) ]\nsending packet: from 192.168.56.106[500] to 192.168.56.107[500] (256 bytes)\nreceived packet: from 192.168.56.107[500] to 192.168.56.106[500] (224 bytes)\nparsed IKE_AUTH response 1 [ IDr AUTH SA TSi TSr ]\nauthentication of '192.168.56.107' with pre-shared key successful\nIKE_SA office-vpn[1] established between 192.168.56.106[192.168.56.106]...192.168.56.107[192.168.56.107]\nscheduling reauthentication in 28111s\nmaximum IKE_SA lifetime 28651s\nselected proposal: ESP:AES_CBC_128/HMAC_SHA2_256_128/NO_EXT_SEQ\nCHILD_SA office-vpn{1} established with SPIs c15d762f_i c9a34420_o and TS 192.168.56.106/32 === 192.168.56.107/32\nconnection 'office-vpn' established successfully\n",
+    "child_rekey_output": "rekey completed successfully\n\n===== swanctl --list-sas =====\noffice-vpn: #1, ESTABLISHED, IKEv2, 2fee7d4418600eae_i* 61d93e84c8283b00_r\n  local  '192.168.56.106' @ 192.168.56.106[500]\n  remote '192.168.56.107' @ 192.168.56.107[500]\n  AES_CBC-128/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_3072\n  established 4s ago, reauth in 28107s\n  office-vpn: #1, reqid 1, DELETED, TUNNEL, ESP:AES_CBC-128/HMAC_SHA2_256_128\n    installed 4s ago, rekeying in 2669s, expires in 3596s\n    in  c15d762f,      0 bytes,     0 packets\n    out c9a34420,      0 bytes,     0 packets\n    local  192.168.56.106/32\n    remote 192.168.56.107/32\n  office-vpn: #2, reqid 1, INSTALLED, TUNNEL, ESP:AES_CBC-128/HMAC_SHA2_256_128/MODP_2048\n    installed 3s ago, rekeying in 2517s, expires in 3597s\n    in  c2d5bff8,      0 bytes,     0 packets\n    out cb477833,      0 bytes,     0 packets\n    local  192.168.56.106/32\n    remote 192.168.56.107/32\n",
+    "office_a_statusall": "Status of IKE charon daemon (strongSwan 6.0.4, Linux 7.0.0-31-generic, x86_64):\n  uptime: 19 seconds, since Sep 25 10:35:11 2026\n  malloc: sbrk 2965504, mmap 0, used 1041376, free 1924128\n  worker threads: 10 of 16 idle, 6/0/0/0 working, job queue: 0/0/0/0, scheduled: 6\n  loaded plugins: charon aesni random nonce x509 revocation constraints pubkey pkcs1 pkcs7 dnskey sshkey pem openssl pkcs8 agent gcm drbg attr kernel-netlink resolve socket-default connmark stroke vici updown eap-mschapv2 xauth-generic counters\nListening IP addresses:\n  10.0.2.15\n  fd17:625c:f037:2:a00:27ff:fec0:8e34\n  192.168.56.106\nConnections:\n  office-vpn:  192.168.56.106...192.168.56.107  IKEv2, dpddelay=30s\n  office-vpn:   local:  [192.168.56.106] uses pre-shared key authentication\n  office-vpn:   remote: [192.168.56.107] uses pre-shared key authentication\n  office-vpn:   child:  dynamic === dynamic TUNNEL, dpdaction=start\nSecurity Associations (1 up, 0 connecting):\n  office-vpn[1]: ESTABLISHED 5 seconds ago, 192.168.56.106[192.168.56.106]...192.168.56.107[192.168.56.107]\n  office-vpn[1]: IKEv2 SPIs: 2fee7d4418600eae_i* 61d93e84c8283b00_r, pre-shared key reauthentication in 7 hours\n  office-vpn[1]: IKE proposal: AES_CBC_128/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_3072\n  office-vpn{1}:  DELETED, TUNNEL, reqid 1\n  office-vpn{1}:   192.168.56.106/32 === 192.168.56.107/32\n  office-vpn{2}:  INSTALLED, TUNNEL, reqid 1, ESP SPIs: c2d5bff8_i cb477833_o\n  office-vpn{2}:  AES_CBC_128/HMAC_SHA2_256_128/MODP_2048, 0 bytes_i, 0 bytes_o, rekeying in 41 minutes\n  office-vpn{2}:   192.168.56.106/32 === 192.168.56.107/32\n",
+    "office_b_statusall": "Status of IKE charon daemon (strongSwan 6.0.4, Linux 7.0.0-31-generic, x86_64):\n  uptime: 13 seconds, since Sep 25 10:35:17 2026\n  malloc: sbrk 2695168, mmap 0, used 1028512, free 1666656\n  worker threads: 11 of 16 idle, 5/0/0/0 working, job queue: 0/0/0/0, scheduled: 5\n  loaded plugins: charon aesni random nonce x509 revocation constraints pubkey pkcs1 pkcs7 dnskey sshkey pem openssl pkcs8 agent gcm drbg attr kernel-netlink resolve socket-default connmark stroke vici updown eap-mschapv2 xauth-generic counters\nListening IP addresses:\n  10.0.2.15\n  fd17:625c:f037:2:a00:27ff:fecf:d73f\n  192.168.56.107\nConnections:\n  office-vpn:  192.168.56.107...192.168.56.106  IKEv2, dpddelay=30s\n  office-vpn:   local:  [192.168.56.107] uses pre-shared key authentication\n  office-vpn:   remote: [192.168.56.106] uses pre-shared key authentication\n  office-vpn:   child:  dynamic === dynamic TUNNEL, dpdaction=start\nSecurity Associations (1 up, 0 connecting):\n  office-vpn[1]: ESTABLISHED 5 seconds ago, 192.168.56.107[192.168.56.107]...192.168.56.106[192.168.56.106]\n  office-vpn[1]: IKEv2 SPIs: 2fee7d4418600eae_i 61d93e84c8283b00_r*, pre-shared key reauthentication in 7 hours\n  office-vpn[1]: IKE proposal: AES_CBC_128/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_3072\n  office-vpn{1}:  DELETED, TUNNEL, reqid 1\n  office-vpn{1}:   192.168.56.107/32 === 192.168.56.106/32\n  office-vpn{2}:  INSTALLED, TUNNEL, reqid 1, ESP SPIs: cb477833_i c2d5bff8_o\n  office-vpn{2}:  AES_CBC_128/HMAC_SHA2_256_128/MODP_2048, 0 bytes_i, 0 bytes_o, rekeying in 48 minutes\n  office-vpn{2}:   192.168.56.107/32 === 192.168.56.106/32\n"
+  }
+}

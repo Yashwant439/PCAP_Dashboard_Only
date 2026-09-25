@@ -1,0 +1,21 @@
+{
+  "dataset_schema_version": "3.0",
+  "experiment_id": "AES256_SHA384_DH14_PFS14_TCP",
+  "repetition": 2,
+  "timestamp": "2026-09-25T16:53:07.871955",
+  "status": "FAILED",
+  "reason": "sudo command failed with exit code 7",
+  "requested": {
+    "ike": "aes256-sha384-modp2048",
+    "esp": "aes256-sha384-modp2048",
+    "traffic": "tcp"
+  },
+  "validation": null,
+  "capture": {
+    "file": null
+  },
+  "evidence": {
+    "office_a_statusall": "",
+    "office_b_statusall": "Status of IKE charon daemon (strongSwan 6.0.4, Linux 7.0.0-31-generic, x86_64):\n  uptime: 36 seconds, since Sep 25 11:22:29 2026\n  malloc: sbrk 2961408, mmap 0, used 1044528, free 1916880\n  worker threads: 11 of 16 idle, 5/0/0/0 working, job queue: 0/0/0/0, scheduled: 4\n  loaded plugins: charon aesni random nonce x509 revocation constraints pubkey pkcs1 pkcs7 dnskey sshkey pem openssl pkcs8 agent gcm drbg attr kernel-netlink resolve socket-default connmark stroke vici updown eap-mschapv2 xauth-generic counters\nListening IP addresses:\n  10.0.2.15\n  fd17:625c:f037:2:a00:27ff:fecf:d73f\n  192.168.56.107\nConnections:\n  office-vpn:  192.168.56.107...192.168.56.106  IKEv2, dpddelay=30s\n  office-vpn:   local:  [192.168.56.107] uses pre-shared key authentication\n  office-vpn:   remote: [192.168.56.106] uses pre-shared key authentication\n  office-vpn:   child:  dynamic === dynamic TUNNEL, dpdaction=start\nSecurity Associations (0 up, 0 connecting):\n  none\n"
+  }
+}

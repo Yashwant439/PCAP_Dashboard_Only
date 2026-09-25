@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.1",
+  "source_pcap": "D:\\SIH-160\\ai-based-pcap-analyzer\\pcap_factory\\captures\\AES256_SHA256_DH15_PFS14_ICMP_rep01.pcap",
+  "features": {
+    "packet_count": 50,
+    "total_bytes": 10156,
+    "avg_packet_size": 203.12,
+    "min_packet_size": 122,
+    "max_packet_size": 634,
+    "capture_duration_seconds": 52.124675,
+    "udp_packet_count": 10,
+    "tcp_packet_count": 0,
+    "icmp_packet_count": 0,
+    "udp_500_count": 10,
+    "udp_4500_count": 0,
+    "ike_packet_count": 10,
+    "esp_packet_count": 40,
+    "ike_sa_init_count": 2,
+    "ike_auth_count": 2,
+    "create_child_sa_count": 2,
+    "informational_count": 4,
+    "ike_unknown_count": 0,
+    "ike_request_count": 5,
+    "ike_response_count": 5,
+    "ike_bytes": 3356,
+    "ike_avg_packet_size": 335.6,
+    "esp_bytes": 6800,
+    "esp_avg_packet_size": 170.0,
+    "unique_src_ips": 2,
+    "unique_dst_ips": 2,
+    "src_dst_pairs": 2,
+    "ike_version_detected": "IKEv2",
+    "ike_exchange_distribution": {
+      "IKE_SA_INIT": 2,
+      "IKE_AUTH": 2,
+      "CREATE_CHILD_SA": 2,
+      "INFORMATIONAL": 4
+    }
+  }
+}
