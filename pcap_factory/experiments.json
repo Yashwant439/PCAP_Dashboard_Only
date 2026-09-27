@@ -1,0 +1,284 @@
+{
+  "settings": {
+    "repetitions": 5,
+    "traffic": {
+      "icmp": {
+        "count": 20
+      },
+      "tcp": {
+        "port": 8080,
+        "count": 30
+      },
+      "udp": {
+        "port": 9090,
+        "count": 30
+      }
+    }
+  },
+  "experiments": [
+    {
+      "id": "AES256_SHA256_DH14_PFS14_ICMP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256-modp2048",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_NOPFS_ICMP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_PFS15_ICMP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA256_DH15_PFS14_ICMP",
+      "ike": "aes256-sha256-modp3072",
+      "esp": "aes256-sha256-modp2048",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA256_DH15_PFS15_ICMP",
+      "ike": "aes256-sha256-modp3072",
+      "esp": "aes256-sha256-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA256_DH14_PFS14_ICMP",
+      "ike": "aes128-sha256-modp2048",
+      "esp": "aes128-sha256-modp2048",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA256_DH14_NOPFS_ICMP",
+      "ike": "aes128-sha256-modp2048",
+      "esp": "aes128-sha256",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA256_DH14_PFS15_ICMP",
+      "ike": "aes128-sha256-modp2048",
+      "esp": "aes128-sha256-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA256_DH15_PFS14_ICMP",
+      "ike": "aes128-sha256-modp3072",
+      "esp": "aes128-sha256-modp2048",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA256_DH15_PFS15_ICMP",
+      "ike": "aes128-sha256-modp3072",
+      "esp": "aes128-sha256-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA384_DH14_PFS14_ICMP",
+      "ike": "aes256-sha384-modp2048",
+      "esp": "aes256-sha384-modp2048",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA384_DH14_NOPFS_ICMP",
+      "ike": "aes256-sha384-modp2048",
+      "esp": "aes256-sha384",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA384_DH15_PFS15_ICMP",
+      "ike": "aes256-sha384-modp3072",
+      "esp": "aes256-sha384-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_PFS14_TCP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256-modp2048",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_NOPFS_TCP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_PFS15_TCP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256-modp3072",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES256_SHA256_DH15_PFS14_TCP",
+      "ike": "aes256-sha256-modp3072",
+      "esp": "aes256-sha256-modp2048",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES128_SHA256_DH14_PFS14_TCP",
+      "ike": "aes128-sha256-modp2048",
+      "esp": "aes128-sha256-modp2048",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES128_SHA256_DH14_NOPFS_TCP",
+      "ike": "aes128-sha256-modp2048",
+      "esp": "aes128-sha256",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES256_SHA384_DH14_PFS14_TCP",
+      "ike": "aes256-sha384-modp2048",
+      "esp": "aes256-sha384-modp2048",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_PFS14_UDP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256-modp2048",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_NOPFS_UDP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES256_SHA256_DH14_PFS15_UDP",
+      "ike": "aes256-sha256-modp2048",
+      "esp": "aes256-sha256-modp3072",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES256_SHA256_DH15_PFS14_UDP",
+      "ike": "aes256-sha256-modp3072",
+      "esp": "aes256-sha256-modp2048",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES128_SHA256_DH14_PFS14_UDP",
+      "ike": "aes128-sha256-modp2048",
+      "esp": "aes128-sha256-modp2048",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES128_SHA256_DH14_NOPFS_UDP",
+      "ike": "aes128-sha256-modp2048",
+      "esp": "aes128-sha256",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES256_SHA384_DH14_PFS14_UDP",
+      "ike": "aes256-sha384-modp2048",
+      "esp": "aes256-sha384-modp2048",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES128_SHA256_DH15_PFS15_ICMP",
+      "ike": "aes128-sha256-modp3072",
+      "esp": "aes128-sha256-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA256_DH15_PFS15_TCP",
+      "ike": "aes128-sha256-modp3072",
+      "esp": "aes128-sha256-modp3072",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES128_SHA256_DH15_PFS15_UDP",
+      "ike": "aes128-sha256-modp3072",
+      "esp": "aes128-sha256-modp3072",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES256_SHA384_DH15_PFS15_ICMP",
+      "ike": "aes256-sha384-modp3072",
+      "esp": "aes256-sha384-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA384_DH15_PFS15_TCP",
+      "ike": "aes256-sha384-modp3072",
+      "esp": "aes256-sha384-modp3072",
+      "traffic": "tcp"
+    },
+    {
+      "id": "AES256_SHA384_DH15_PFS15_UDP",
+      "ike": "aes256-sha384-modp3072",
+      "esp": "aes256-sha384-modp3072",
+      "traffic": "udp"
+    },
+    {
+      "id": "AES128_SHA256_DH15_NOPFS_ICMP",
+      "ike": "aes128-sha256-modp3072",
+      "esp": "aes128-sha256",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA384_DH14_NOPFS_ICMP",
+      "ike": "aes128-sha384-modp2048",
+      "esp": "aes128-sha384",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA384_DH14_PFS14_ICMP",
+      "ike": "aes128-sha384-modp2048",
+      "esp": "aes128-sha384-modp2048",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA384_DH14_PFS15_ICMP",
+      "ike": "aes128-sha384-modp2048",
+      "esp": "aes128-sha384-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA384_DH15_NOPFS_ICMP",
+      "ike": "aes128-sha384-modp3072",
+      "esp": "aes128-sha384",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA384_DH15_PFS14_ICMP",
+      "ike": "aes128-sha384-modp3072",
+      "esp": "aes128-sha384-modp2048",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES128_SHA384_DH15_PFS15_ICMP",
+      "ike": "aes128-sha384-modp3072",
+      "esp": "aes128-sha384-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA256_DH15_NOPFS_ICMP",
+      "ike": "aes256-sha256-modp3072",
+      "esp": "aes256-sha256",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA384_DH14_PFS15_ICMP",
+      "ike": "aes256-sha384-modp2048",
+      "esp": "aes256-sha384-modp3072",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA384_DH15_NOPFS_ICMP",
+      "ike": "aes256-sha384-modp3072",
+      "esp": "aes256-sha384",
+      "traffic": "icmp"
+    },
+    {
+      "id": "AES256_SHA384_DH15_PFS14_ICMP",
+      "ike": "aes256-sha384-modp3072",
+      "esp": "aes256-sha384-modp2048",
+      "traffic": "icmp"
+    }
+  ]
+}

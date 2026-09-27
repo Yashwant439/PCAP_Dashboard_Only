@@ -1,0 +1,35 @@
+services:
+  frontend:
+    build:
+      context: .
+      target: frontend
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - api
+      - scapy
+
+  api:
+    build:
+      context: .
+      target: backend
+    env_file:
+      - .env
+    environment:
+      VPN_ANALYZER_API_HOST: 0.0.0.0
+      VPN_ANALYZER_API_PORT: "8770"
+      VPN_ANALYZER_DATABASE: /app/data/analyzer.sqlite3
+    ports:
+      - "127.0.0.1:8770:8770"
+    volumes:
+      - ./data:/app/data
+
+  scapy:
+    build:
+      context: .
+      target: backend
+    command: ["python", "server/scapy_analyzer.py"]
+    environment:
+      VPN_ANALYZER_SCAPY_HOST: 0.0.0.0
+    ports:
+      - "127.0.0.1:8765:8765"

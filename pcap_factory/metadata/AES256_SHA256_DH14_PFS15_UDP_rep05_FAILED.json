@@ -1,0 +1,21 @@
+{
+  "dataset_schema_version": "3.0",
+  "experiment_id": "AES256_SHA256_DH14_PFS15_UDP",
+  "repetition": 5,
+  "timestamp": "2026-09-25T17:19:06.570061",
+  "status": "FAILED",
+  "reason": "",
+  "requested": {
+    "ike": "aes256-sha256-modp2048",
+    "esp": "aes256-sha256-modp3072",
+    "traffic": "udp"
+  },
+  "validation": null,
+  "capture": {
+    "file": null
+  },
+  "evidence": {
+    "office_a_statusall": "Status of IKE charon daemon (strongSwan 6.0.4, Linux 7.0.0-31-generic, x86_64):\n  uptime: 83 seconds, since Sep 25 11:47:40 2026\n  malloc: sbrk 2965504, mmap 0, used 1061568, free 1903936\n  worker threads: 11 of 16 idle, 5/0/0/0 working, job queue: 0/0/0/0, scheduled: 3\n  loaded plugins: charon aesni random nonce x509 revocation constraints pubkey pkcs1 pkcs7 dnskey sshkey pem openssl pkcs8 agent gcm drbg attr kernel-netlink resolve socket-default connmark stroke vici updown eap-mschapv2 xauth-generic counters\nListening IP addresses:\n  10.0.2.15\n  fd17:625c:f037:2:a00:27ff:fec0:8e34\n  192.168.56.106\nConnections:\n  office-vpn:  192.168.56.106...192.168.56.107  IKEv2, dpddelay=30s\n  office-vpn:   local:  [192.168.56.106] uses pre-shared key authentication\n  office-vpn:   remote: [192.168.56.107] uses pre-shared key authentication\n  office-vpn:   child:  dynamic === dynamic TUNNEL, dpdaction=start\nSecurity Associations (1 up, 0 connecting):\n  office-vpn[1]: ESTABLISHED 68 seconds ago, 192.168.56.106[192.168.56.106]...192.168.56.107[192.168.56.107]\n  office-vpn[1]: IKEv2 SPIs: ed659a1d64f5340a_i* ab1f746ab1861d23_r, pre-shared key reauthentication in 7 hours\n  office-vpn[1]: IKE proposal: AES_CBC_256/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_2048\n  office-vpn{2}:  INSTALLED, TUNNEL, reqid 1, ESP SPIs: cd093c32_i c0b33da4_o\n  office-vpn{2}:  AES_CBC_256/HMAC_SHA2_256_128/MODP_3072, 0 bytes_i, 0 bytes_o, rekeying in 46 minutes\n  office-vpn{2}:   192.168.56.106/32 === 192.168.56.107/32\n",
+    "office_b_statusall": "Status of IKE charon daemon (strongSwan 6.0.4, Linux 7.0.0-31-generic, x86_64):\n  uptime: 76 seconds, since Sep 25 11:47:48 2026\n  malloc: sbrk 2826240, mmap 0, used 1047792, free 1778448\n  worker threads: 11 of 16 idle, 5/0/0/0 working, job queue: 0/0/0/0, scheduled: 3\n  loaded plugins: charon aesni random nonce x509 revocation constraints pubkey pkcs1 pkcs7 dnskey sshkey pem openssl pkcs8 agent gcm drbg attr kernel-netlink resolve socket-default connmark stroke vici updown eap-mschapv2 xauth-generic counters\nListening IP addresses:\n  10.0.2.15\n  fd17:625c:f037:2:a00:27ff:fecf:d73f\n  192.168.56.107\nConnections:\n  office-vpn:  192.168.56.107...192.168.56.106  IKEv2, dpddelay=30s\n  office-vpn:   local:  [192.168.56.107] uses pre-shared key authentication\n  office-vpn:   remote: [192.168.56.106] uses pre-shared key authentication\n  office-vpn:   child:  dynamic === dynamic TUNNEL, dpdaction=start\nSecurity Associations (1 up, 0 connecting):\n  office-vpn[1]: ESTABLISHED 69 seconds ago, 192.168.56.107[192.168.56.107]...192.168.56.106[192.168.56.106]\n  office-vpn[1]: IKEv2 SPIs: ed659a1d64f5340a_i ab1f746ab1861d23_r*, pre-shared key reauthentication in 7 hours\n  office-vpn[1]: IKE proposal: AES_CBC_256/HMAC_SHA2_256_128/PRF_HMAC_SHA2_256/MODP_2048\n  office-vpn{2}:  INSTALLED, TUNNEL, reqid 1, ESP SPIs: c0b33da4_i cd093c32_o\n  office-vpn{2}:  AES_CBC_256/HMAC_SHA2_256_128/MODP_3072, 0 bytes_i, 0 bytes_o, rekeying in 41 minutes\n  office-vpn{2}:   192.168.56.107/32 === 192.168.56.106/32\n"
+  }
+}

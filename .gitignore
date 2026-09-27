@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+__pycache__/
+*.pyc
+*.sqlite
+*.sqlite3
+*.pcap
+*.pcapng
+backend/data/captures/
+

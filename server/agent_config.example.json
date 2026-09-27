@@ -1,0 +1,9 @@
+{
+  "central_api_url": "http://127.0.0.1:8770",
+  "gateway_id": "gw-example-01",
+  "agent_token": "gw_agent_EXAMPLE_TOKEN_DO_NOT_COMMIT_SECRETS",
+  "telemetry_adapter": "strongswan",
+  "agent_version": "1.2.0",
+  "interval": 15,
+  "timeout": 10
+}
